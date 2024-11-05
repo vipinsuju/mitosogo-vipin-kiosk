@@ -1,7 +1,5 @@
 import  { useEffect } from "react";
-
 import "./style.css";
-
 export const Accordian = () => {
   useEffect(() => {
     // accordian
