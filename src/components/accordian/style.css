@@ -1,0 +1,186 @@
+/* accodian */
+
+.slider {
+  height: 100px; /* Height of the slider */
+  margin: auto; /* Center the slider */
+  overflow: hidden; /* Hide overflow to create a sliding effect */
+  position: relative; /* Positioning context for child elements */
+  width: 100%; /* Set width to 100% for responsiveness */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(
+      calc(-250px * 8)
+    ); /* Adjust based on the total number of slides */
+  }
+}
+
+.slide-track {
+  animation: scroll 40s linear infinite; /* Scroll animation */
+  display: flex; /* Flexbox for horizontal alignment */
+  width: calc(
+    250px * 16
+  ); /* Width based on the number of slides (8 visible + 8 clones) */
+}
+
+.slide {
+  height: 100px; /* Height of each logo */
+  width: 250px; /* Width of each logo */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  font-size: 24px; /* Example font size for logo text */
+  background-color: #f0f0f0; /* Example background color for visibility */
+  border: 1px solid #ccc; /* Optional border for visibility */
+}
+
+.quote-card {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  padding: 20px; /* Padding around the card */
+  border: 1px solid #ccc; /* Card border */
+  border-radius: 8px; /* Rounded corners */
+  margin: 20px; /* Margin around the card */
+  background-color: #f9f9f9; /* Background color */
+}
+
+.author-image {
+  border-radius: 50%; /* Circular image */
+  width: 100px; /* Width of the image */
+  height: 100px; /* Height of the image */
+  object-fit: cover; /* Ensure the image covers the area */
+  margin-right: 20px; /* Space between image and text */
+}
+
+.quote-text {
+  flex-grow: 1; /* Take remaining space */
+}
+
+.separator {
+  border-left: 2px solid #ccc; /* Vertical separator */
+  height: 1px; /* Height of the separator */
+  margin: 0 20px; /* Margin for the separator */
+}
+
+.author-info {
+  margin-top: 10px; /* Space above author info */
+}
+
+.accord-content {
+  padding: 15px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.accord-content:hover {
+  background-color: #f1f1f1;
+}
+
+.accord-image {
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  margin-bottom: 20px;
+}
+.try-link {
+  text-decoration: none;
+  color: #dd0735;
+}
+.accord-header {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 24px;
+}
+.accod-title {
+  font-size: 42px;
+  padding-bottom: 40px;
+}
+.image-accod {
+  width: 518px;
+  height: 544px;
+}
+
+/* General card styling */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+}
+
+/* Card image styling */
+.card img {
+  border-radius: 10px 0 0 10px;
+}
+
+/* Carousel controls styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Ensure slider is centered on the page */
+.carousel {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 800px;
+  height: 100%;
+}
+.card-slide {
+  display: flex;
+  justify-content: center;
+}
+.content-card {
+  padding: 40px;
+}
+.author-name {
+  font-size: 20px;
+}
+.author-company {
+  font-size: 20px;
+}
+.text-align {
+  text-align: left;
+  font-size: 24px;
+}
+.slide {
+  background: white;
+  border-radius: 8px;
+}
+.card-slide {
+  background-color: #ccc;
+  padding: 120px 0;
+}
+.logi-slide {
+  background-color: #ccc;
+}
+
+/* Control button hover effect */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #444;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+  }
+  .card-move {
+    padding: 40px;
+  }
+  .card img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: auto;
+  }
+  .card .row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,49 @@
+/* footer */
+.footer {
+  display: flex;
+  justify-content: space-between; /* Align items on the left and right */
+  padding: 15px;
+  background-color: white; /* Footer background color */
+  color: black;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  flex-wrap: wrap; /* Allow wrapping for mobile responsiveness */
+}
+
+.footer-left {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.footer-link {
+  color: black; /* Link color */
+  text-decoration: none; /* Remove underline */
+  margin: 0 5px; /* Add some space around links */
+}
+
+.footer-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer-right {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.footer-right p {
+  margin: 0; /* Remove default margin */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+  }
+
+  .footer-left {
+    margin-top: 10px; /* Add some margin on top for spacing */
+  }
+}

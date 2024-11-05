@@ -1,0 +1,51 @@
+/* partners */
+.logo-section {
+  text-align: center;
+  padding: 120px 0;
+}
+
+.logo-section h2 {
+  color: black; /* Title color */
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Card styles */
+.logo-card {
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px; /* Smooth transition */
+}
+
+/* Logo image styles */
+.logo-card img {
+  width: 190px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Hover effect */
+.logo-card:hover {
+  transform: translateY(-5px); /* Move up on hover */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .logo-card {
+    flex: 0 0 45%; /* Each card takes up 45% of the width */
+    margin: 10px 5px; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-card {
+    flex: 0 0 45%; /* Two in a row for small screens */
+  }
+}

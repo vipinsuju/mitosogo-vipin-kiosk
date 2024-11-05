@@ -1,0 +1,241 @@
+/* tab module */
+/* Existing styles */
+/* Existing styles */
+.tab-module {
+  width: 80%;
+  margin: 50px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.tab-point {
+  text-align: left;
+}
+
+.tab-module h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-link {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-link.active {
+  background-color: #020a19;
+  color: white;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.tab-content {
+  display: none;
+  background: #f7f7f7;
+}
+
+.tab-content li {
+  text-decoration: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tick-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+p {
+  margin: 0;
+}
+
+.row {
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+}
+
+.left-column {
+  padding-right: 20px;
+}
+
+.right-column img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #dd0735;
+}
+.tab-module1 {
+  padding: 120px 0;
+}
+
+/* Media Queries for General Mobile Responsiveness (768px and below) */
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column; /* Stack the tabs vertically on mobile */
+  }
+
+  .tab-link {
+    margin-bottom: 10px; /* Add spacing between tabs */
+    font-size: 16px; /* Slightly reduce text size */
+    border-bottom: 1px solid #ddd; /* Add border for separation */
+  }
+
+  .row {
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  .column {
+    width: 100%; /* Make columns take full width */
+    margin-bottom: 20px; /* Add spacing between columns */
+  }
+
+  .right-column img {
+    width: 100%; /* Ensure images fit within mobile view */
+    max-width: 100%; /* Prevent image overflow */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 6px; /* Slightly reduce border-radius for smaller screens */
+  }
+
+  img {
+    width: 100%; /* Ensure all images scale properly on mobile */
+    max-width: 100%; /* Prevent overflow */
+    height: auto;
+  }
+
+  .tab-module {
+    width: 90%;
+    padding: 15px;
+    margin: 30px auto;
+  }
+
+  .tab-module h2 {
+    font-size: 22px; /* Adjust heading size for smaller screens */
+    margin-bottom: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+}
+
+/* Media Queries for Very Small Mobile Devices (400px and below) */
+@media (max-width: 400px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab-link {
+    margin-bottom: 10px; /* Add spacing between tabs */
+    font-size: 14px; /* Reduce text size for smaller screens */
+  }
+
+  .row {
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  .column {
+    width: 100%; /* Make columns take full width */
+    margin-bottom: 20px; /* Add space between columns */
+  }
+
+  .right-column img {
+    width: 100%; /* Ensure images fit within mobile view */
+    max-width: 100%; /* Prevent image overflow */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 6px; /* Slightly smaller border-radius for small devices */
+  }
+
+  img {
+    width: 100%; /* Ensure all images scale properly on mobile */
+    max-width: 100%; /* Prevent overflow */
+    height: auto;
+  }
+
+  /* Adjust the padding and margins for better layout on small devices */
+  .tab-module {
+    width: 90%;
+    padding: 15px;
+    margin: 30px auto;
+  }
+
+  .tab-module h2 {
+    font-size: 20px; /* Adjust heading size for smaller screens */
+    margin-bottom: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+}
+.img-fluid {
+  max-width: 100%; /* Ensure image fits within the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries for Small Mobile Devices (320px and below) */
+@media (max-width: 320px) {
+  .text-center {
+    padding: 0; /* Remove any extra padding that could affect layout */
+  }
+
+  .img-fluid {
+    max-width: 100%; /* Ensure the image fits within the screen */
+    width: 100%; /* Ensure it takes the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Scale the image without clipping */
+  }
+
+  img {
+    width: 100%; /* Ensure all images are responsive */
+    height: auto;
+    width: 100%; /* Ensure images fit within mobile view */
+    max-width: 100%; /* Prevent image overflow */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 6px;
+  }
+}

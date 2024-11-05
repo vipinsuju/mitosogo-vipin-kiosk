@@ -1,0 +1,166 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  background: #020a19;
+}
+
+/* Left Column Styling */
+.hero-left {
+  max-width: 500px;
+}
+
+.hero-left h1 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+.hero-left p {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.email-form {
+  display: flex;
+  gap: 10px;
+}
+
+.email-form input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.email-form button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.email-form button:hover {
+  background-color: #1e50b6;
+}
+
+/* Right Column (Image) */
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .email-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .email-form input {
+    width: 100%;
+  }
+
+  .hero-right {
+    order: 1; /* Move the image to come after the content */
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-right img {
+    margin-top: 20px;
+  }
+}
+
+/* column content */
+.column-content {
+  background-color: #1a1c2b;
+  padding: 20px; /* Added padding for better spacing */
+}
+
+.column {
+  flex: 1; /* Each column takes equal space */
+  padding: 20px;
+  position: relative;
+  box-sizing: border-box; /* Ensure padding is inside the width */
+  text-align: center; /* Center the text inside each column */
+}
+
+.separator {
+  height: 1px; /* Thickness of the separator line */
+  background-color: #ffffff99; /* Semi-transparent white color for the separator */
+  margin: 20px 0; /* Space around the separator line */
+  width: 100%;
+  display: none; /* Full width separator line */
+}
+
+/* Line separating the columns */
+.column::after {
+  content: ""; /* Empty content for the line */
+  display: block;
+  height: 100%; /* Full height of the column */
+  width: 1px; /* Width of the line */
+  background-color: #ffffff99; /* Color of the line */
+  position: absolute;
+  right: 0; /* Positioning the line on the right */
+  top: 0; /* Align it to the top */
+}
+
+.column:last-child::after {
+  display: none; /* Hide the line on the last column */
+}
+
+/* Header styling */
+.column h2 {
+  color: #fff; /* White text to contrast with the dark background */
+  margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.column p {
+  color: #ffffff99; /* Semi-transparent white for paragraph text */
+  line-height: 1.5; /* Spacing between lines */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .col-content {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center;
+  }
+
+  .column {
+    width: 100%; /* Columns take full width on mobile */
+    margin-bottom: 20px; /* Spacing between stacked columns */
+    padding: 10px 0; /* Reduce padding for mobile view */
+    text-align: center; /* Center the text inside each column */
+  }
+
+  .column::after {
+    display: none; /* Remove the vertical separator on mobile */
+  }
+
+  .separator {
+    display: block; /* Keep the horizontal separator visible */
+    height: 1px; /* Adjust thickness */
+    width: 100%; /* Full width separator */
+  }
+}

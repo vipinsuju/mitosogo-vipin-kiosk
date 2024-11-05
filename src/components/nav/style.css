@@ -1,0 +1,153 @@
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(2, 10, 25, 1);
+  padding: 15px 0;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffd700; /* Optional hover color */
+}
+
+.header-button button {
+  padding: 10px 20px;
+  background-color: #dd0735;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.header-button button:hover {
+  background-color: #bb022a;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 15px;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-menu ul li a {
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  color: #020a19;
+  text-decoration: none;
+}
+.mobile-menu ul li button {
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  color: #020a19;
+  text-decoration: none;
+  background-color: #dd0735;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+/* Add styles for the logo when the header is scrolled */
+.scroll-header .logo img {
+  content: url("/logo1.png"); /* Path to your black logo */
+}
+
+/* Make sure there's no background when the header is scrolled */
+.scroll-header {
+  background-color: transparent; /* Make the background transparent */
+}
+
+
+.mobile-menu ul li button:hover {
+  background-color: #bb022a;
+}
+.mobile-menu ul li a:hover {
+  background-color: #bb022a;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links,
+  .header-button {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+}
+
+/* Change header background when scrolling */
+.scroll-header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-header .nav-links li a {
+  color: #020a19;
+}

@@ -1,0 +1,67 @@
+/* cta module */
+.cta-section {
+  text-align: center;
+
+  background: #020a19;
+  padding: 60px;
+}
+
+.cta-section h2 {
+  color: white; /* Title color */
+  margin-bottom: 40px;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.email-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px; /* Width for desktop */
+  margin-right: 10px;
+}
+
+.get-started-btn {
+  padding: 10px 20px;
+  background-color: #dd0735;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #bb022a; /* Darker blue on hover */
+}
+
+.demo-request {
+  margin-top: 15px;
+}
+
+.demo-link {
+  color: #dd0735;
+  text-decoration: none;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: translateX(5px); /* Move arrow to the right on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .email-input {
+    width: 70%; /* Width for mobile */
+  }
+}
